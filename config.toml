@@ -1,0 +1,28 @@
+baseURL = "https://www.stadianeros.com/"
+languageCode = "es-ES"
+title = "Noticias, tutoriales y juegos de Stadia"
+
+defaultContentLanguage = "es"
+disableHugoGeneratorInject = true
+disqusShortname = "stadianeros"
+enableRobotsTXT = true
+paginate = 8
+paginatePath = "pagina"
+preserveTaxonomyNames = false
+removePathAccents = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+      
+[params]
+  description = "Todas las noticias, tutoriales e información de la plataforma de streaming Stadia y su catálogo completo de juegos en español"
+  image = "/favicon/apple-icon-180x180.png"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  tags = "/etiquetas/:title"
+  posts = "/:title"

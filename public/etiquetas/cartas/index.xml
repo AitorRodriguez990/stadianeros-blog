@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cartas on Stadianeros 🎮 | Noticias, tutoriales y juegos de Stadia</title>
+    <link>https://www.stadianeros.com/etiquetas/cartas/</link>
+    <description>Recent content in Cartas on Stadianeros 🎮 | Noticias, tutoriales y juegos de Stadia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Sun, 29 Mar 2020 22:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.stadianeros.com/etiquetas/cartas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SteamWorld Quest: Hand of Gilgamech</title>
+      <link>https://www.stadianeros.com/steamworld-quest-hand-of-gilgamech/</link>
+      <pubDate>Sun, 29 Mar 2020 22:00:00 +0000</pubDate>
+      
+      <guid>https://www.stadianeros.com/steamworld-quest-hand-of-gilgamech/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

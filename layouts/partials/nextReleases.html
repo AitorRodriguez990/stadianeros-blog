@@ -1,0 +1,26 @@
+<div class="st-NextReleases">
+  <h3 class="st-Aside-title">
+    Próximos lanzamientos 🚀
+    <small>
+      <a class="u-anchor" href="/proximos-lanzamientos">
+        Ver más
+      </a>
+    </small>
+  </h3>
+  <ul class="st-NextReleases-list">
+    {{ range sort ( where ( where (.Site.Pages.ByParam "releaseDate") ".Params.category" "games") ".Params.released" false) }}
+    {{ if lt (now.Format "2006-01-02") .Params.releaseDate }}
+      {{ $fullReleaseDay := time .Params.releaseDate }}
+      <li class="st-NextReleases-item">
+        <a class="st-NextReleases-itemAnchor" href="{{ .Params.url }}">
+          <img alt="{{ .Title }}" data-src="{{ .Params.image }}" class="u-lazyload lazyload" loading="lazy" />
+          <h4 class="st-NextReleases-itemName">{{ .Title }}</h4>
+          <p class="st-NextReleases-itemDate">
+            {{ $fullReleaseDay.Day }} {{ index $.Site.Data.months (printf "%d" $fullReleaseDay.Month) }} {{ $fullReleaseDay.Year }}
+          </p>
+        </a>
+      </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>

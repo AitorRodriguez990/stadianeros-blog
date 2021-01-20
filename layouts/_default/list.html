@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ $paginator := .Paginate (where .Pages ".Params.category" "posts") }}
+  <div class="st-Content u-center">
+    <section class="st-Feed">
+      <h1 class="st-Feed-title">{{ .Title }} Stadia</h1>
+      {{ range $paginator.Pages }}
+        {{ partial "summary.html" . }}
+      {{ end }}
+
+      {{ partial "pagination.html" . }}
+    </section>
+
+    {{ partial "aside.html" . }}
+  </div>
+{{ end }}

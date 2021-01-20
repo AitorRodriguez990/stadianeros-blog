@@ -1,0 +1,28 @@
+{{ define "main" }}
+  {{ $contactCss := resources.Get "styles/contact.css" }}
+  {{ $contactStyle := $contactCss | resources.Minify }}
+  <style>{{$contactStyle.Content | safeCSS}}</style>
+
+  <div class="st-Content u-center">
+    <section class="st-Feed">
+      <h1 class="st-Feed-title">Contacta con nosotros</h1>
+      <h3 class="st-Claim">
+        Te contamos <strong>quienes formamos parte de Stadianeros y de qué nos encargamos</strong> cada uno de nosotros.
+      </h3>
+      <form class="st-Contacto" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+        <p>
+          <label>Email: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <div data-netlify-recaptcha="true"></div>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </section>
+
+    {{ partial "aside.html" . }}
+  </div>
+{{ end }}

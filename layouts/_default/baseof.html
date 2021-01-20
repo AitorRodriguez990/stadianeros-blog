@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Title | default .Site.Title }} | Stadianeros 🎮</title>
+    <meta name="description" content="{{ .Description | default .Site.Params.Description }}">
+    <link rel="preconnect dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="canonical" href="{{ .Permalink }}">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    {{ $css := resources.Get "styles/base.css" }}
+    {{ $style := $css | resources.Minify }}
+    <style>{{$style.Content | safeCSS}}</style>
+    {{ partial "head/favicons.html" }}
+    <meta name="apple-mobile-web-app-title" content="Stadianeros" />
+    <meta name="application-name" content="Stadianeros" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#cd0d23">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#cd0d23">
+    <meta property="og:url" content="{{.Permalink}}" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="{{ .Title | default .Site.Title }}" />
+    <meta property="og:image" content="https://www.stadianeros.com{{ .Params.ImageFull | default .Site.Params.Image }}" />
+    <meta property="og:description" content="{{ .Description | default .Site.Params.Description }}" />
+    <meta property="og:site_name" content="Stadianeros" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@stadianeros" />
+    <meta name="twitter:domain" content="stadianeros.com" />
+    <meta name="twitter:image" content="https://stadianeros.com{{ .Params.ImageFull | default .Site.Params.Image }}" />
+    <meta name="twitter:site" content="@stadianeros" />  
+    {{ if not .Site.IsServer }} 
+      <!-- OneTrust Cookies Consent Notice start -->
+      <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="f9de8c25-ebf6-48d8-970c-7277900d5bee"></script>
+      <script type="text/javascript">
+        function OptanonWrapper() { }
+      </script>
+      <!-- OneTrust Cookies Consent Notice end -->
+      <meta name="google-site-verification" content="6uERj186zlI7DOSmAfA_vKQsypvSNve5Io0CrcMEHto" />
+      <script data-ad-client="ca-pub-7563666420586840" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    {{ end }}
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+    {{ partial "nav.html" . }}
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ if not .Site.IsServer }}
+      {{ $minimalAnalyticsJs := resources.Get "scripts/minimal-analytics.js" }}
+      {{ $minimalAnalyticsScript := $minimalAnalyticsJs | resources.Minify }}
+      <script>{{$minimalAnalyticsScript.Content | safeJS}}</script>
+    {{ end }}
+    {{ $js := resources.Get "scripts/scripts.js" }}
+    {{ $script := $js | resources.Minify }}
+    <script>{{$script.Content | safeJS}}</script>
+  </body>
+</html>

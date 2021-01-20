@@ -1,0 +1,19 @@
+<aside class="st-Aside">
+  <div class="st-Aside-sticky">
+    {{ if and (.Params.description) (.Params.category) }}
+        {{ partial "share.html" . }}
+    {{ end }}
+    {{ partial "newsletter.html" }}
+  </div>
+  {{ if .Params.toc }}
+      {{ partial "tableOfContents.html" . }}
+  {{ end }}
+  {{ partial "featuredPosts.html" . }}
+  {{ partial "latestPosts.html" . }}
+  {{ partial "nextReleases.html" . }}
+  
+  <div class="st-Aside-pblc">
+    <!--<iframe title="Amazon" src="https://rcm-eu.amazon-adsystem.com/e/cm?o=30&p=12&l=ur1&category=prime_video&banner=0E2563Z4FWV9CK4K6Y02&f=ifr&linkID=1b10de71df8e86effbaf61f22d6932bb&t=stadianeros-21&tracking_id=stadianeros-21" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>-->
+      <a href="https://www.amazon.es/primevideo?tag=stadianeros-21&linkCode=ur1" target="_blank" rel="nofollow noopener"><img src="/ASC_BannersXSite_HouseAds_300x250_PV_es-ES._CB1198675309_.gif" alt="Amazon Prime Video"></a>
+  </div>
+</aside>

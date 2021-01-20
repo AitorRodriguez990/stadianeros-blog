@@ -1,2 +1,3 @@
-# stadianeros-blog
-Blog especializado en Stadia
+# Stadianeros 🎮
+
+Repositorio con el código fuente desarrollado para el blog Stadianeros.

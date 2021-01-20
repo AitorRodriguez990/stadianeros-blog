@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vídeos on Stadianeros 🎮 | Noticias, tutoriales y juegos de Stadia</title>
+    <link>https://www.stadianeros.com/etiquetas/v%C3%ADdeos/</link>
+    <description>Recent content in Vídeos on Stadianeros 🎮 | Noticias, tutoriales y juegos de Stadia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Wed, 04 Mar 2020 05:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.stadianeros.com/etiquetas/v%C3%ADdeos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stadia añade la posibilidad de descargar nuestras capturas de pantalla y vídeo</title>
+      <link>https://www.stadianeros.com/stadia-anade-la-posibilidad-de-descargar-nuestras-capturas-de-pantalla-y-video/</link>
+      <pubDate>Wed, 04 Mar 2020 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.stadianeros.com/stadia-anade-la-posibilidad-de-descargar-nuestras-capturas-de-pantalla-y-video/</guid>
+      <description>Ya desde sus comienzos Stadia nos permitía realizar capturas de pantalla tanto de imagen como en vídeo y desde ayer 3 de marzo, también nos da la posibilidad de descargarnos estas capturas en la web.
+¿Cómo puedo hacer una captura de pantalla o vídeo de mi partida? Aunque ya hace unas semanas te explicamos cómo hacer capturas de pantalla o grabar vídeos en Stadia, volvemos a ello por si no quedó claro.</description>
+    </item>
+    
+    <item>
+      <title>Cómo hacer capturas de pantalla o grabar vídeos en Stadia</title>
+      <link>https://www.stadianeros.com/como-hacer-capturas-de-pantalla-o-grabar-videos-en-stadia/</link>
+      <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.stadianeros.com/como-hacer-capturas-de-pantalla-o-grabar-videos-en-stadia/</guid>
+      <description>A todos nos gusta poder capturar los mejores momentos de nuestras partidas, desde Stadianeros lo sabemos y os enseñamos cómo hacerlo en la plataforma de videojuegos en streaming Stadia.
+Continúa leyendo y sabrás cómo hacer capturas de pantalla o grabar vídeos en Stadia. Siempre y cuando cuentes con el mando oficial.
+Captura tus momentos en Stadia En Google Stadia podemos hacer vídeos y capturas de pantalla utilizando el botón de captura que encontramos en el mando oficial.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,52 @@
+{{ define "main" }}
+  {{ $section := .Site.GetPage "section" .Section }}
+
+  <div class="st-Content u-center">
+    <article class="st-Article">
+      <header class="st-Article-header">
+        <img class="st-Article-headerImage u-borderImage" src="{{- .Params.ImageFull -}}" title="{{- .Title -}}" alt="{{- .Title -}}" />
+        <h1 class="st-Article-headerTitle">{{- .Title -}}</h1>
+        <div class="st-Article-headerMeta">
+          <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}'>
+            <span class="u-showOnlyDesktop">Publicado el </span>{{ .Date.Day }} de {{ index $.Site.Data.months (printf "%d" .Date.Month) }} de {{ .Date.Year }}
+          </time>
+            | 
+          <span>📖 {{ .ReadingTime }} minutos de lectura</span>
+          {{ if isset .Params "author" }}
+            <span class="u-showExceptMobile">|</span> {{ partial "authorWithImage.html" . }}
+          {{ end }}
+        </div>
+        <p class="st-Article-headerDescription">
+          {{ .Description }}
+        </p>
+        {{- partial "tags.html" . -}}
+
+        <!-- {{ if not .Site.IsServer }}
+          {{- partial "ads/articleTop.html" . -}}
+        {{ end }} -->
+      </header>
+  
+      <section class="st-Article-content">
+        {{- .Content -}}
+      </section>
+
+      {{ $random := seq 2 | shuffle | first 1 }}
+      {{ if in $random 1 }}
+        {{ partial "telegram.html" }}
+      {{ end }}
+      {{ if in $random 2 }}
+        {{ partial "twitter.html" }}
+      {{ end }}
+
+      <!-- {{ if not .Site.IsServer }}
+        {{- partial "ads/articleBottom.html" . -}}
+      {{ end }} -->
+
+      {{ partial "disqus.html" . }}
+
+      {{ partial "singlePagination.html" . }}
+    </article>
+
+    {{ partial "aside.html" . }}
+  </div>
+{{ end }}

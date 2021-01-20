@@ -1,0 +1,27 @@
+<a class="st-Game" href="{{ .Params.url }}">
+  <div class="st-Game-image">
+    <img alt="{{ .Title }}" data-src="{{ .Params.image }}" class="u-lazyload lazyload" loading="lazy" />
+    <div class="st-Game-availability">
+      {{ if eq .Params.releaseDate "" }}
+        <div class="st-Availability is-offline">Próximamente</div>
+      {{ else }}
+        {{ if ge now .Params.releaseDate }}
+          <div class="st-Availability is-online">Disponible</div>
+        {{ else }}
+          {{ $fullReleaseDay := time .Params.releaseDate }}
+          <div class="st-Availability is-offline">
+            {{ $fullReleaseDay.Day }} de {{ index $.Site.Data.months (printf "%d" $fullReleaseDay.Month) }} de {{ $fullReleaseDay.Year }}
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="st-Game-content">
+    <h2 class="st-Game-title">
+      {{ .Title }}
+    </h2>
+    <div class="st-Game-description">
+      {{ .Description  }}
+    </div>
+  </div>
+</a>

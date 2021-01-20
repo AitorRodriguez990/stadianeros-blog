@@ -1,0 +1,30 @@
+{{ $css := resources.Get "styles/singlePagination.css" }}
+{{ $style := $css | resources.Minify }}
+<style>{{$style.Content | safeCSS}}</style>
+
+<div class="st-SinglePagination">
+  {{ with .NextInSection }}
+    <a class="st-SinglePagination-next" href="{{.Permalink}}">
+      <div class="st-SinglePagination-button">
+        <i></i> Artículo siguiente
+      </div>
+      <div class="st-SinglePagination-image">
+        <img data-src="{{ .Params.image }}" class="u-lazyload lazyload" loading="lazy" alt="{{ .Title }}" />
+      </div>
+      <p class="st-SinglePagination-title">{{ .Title }}</p>
+      <p class="st-SinglePagination-description">{{ .Description }}</p>
+    </a>
+  {{ end }}
+  {{ with .PrevInSection }}
+    <a class="st-SinglePagination-prev" href="{{.Permalink}}">
+      <div class="st-SinglePagination-button">
+        Artículo anterior <i class='is-right'></i>
+      </div>
+      <div class="st-SinglePagination-image">
+        <img data-src="{{ .Params.image }}" class="u-lazyload lazyload" loading="lazy" alt="{{ .Title }}" />
+      </div>
+      <p class="st-SinglePagination-title">{{ .Title }}</p>
+      <p class="st-SinglePagination-description">{{ .Description }}</p>
+    </a>
+  {{ end }}
+</div>

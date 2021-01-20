@@ -1,0 +1,22 @@
+<div class="st-Disqus">
+  <p class="st-Disqus-invite">✍️ Si te ha gustado el artículo, o quieres dar tu opinión sobre él, <strong>¡deja tu comentario!</strong> 👇</p>
+  <p class="st-Disqus-title">Comentarios</p>
+  <div class="st-Disqus-comments u-borderImage">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+  
+    (function() {
+        // Don't ever inject Disqus on localhost--it creates unwanted
+        // discussions from 'localhost:1313' on your Disqus account...
+        if (window.location.hostname == "localhost")
+            return;
+  
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '{{ .Site.DisqusShortname }}';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Por favor, activa JavaScript para ver los comentarios.</noscript>
+  </div>
+</div>

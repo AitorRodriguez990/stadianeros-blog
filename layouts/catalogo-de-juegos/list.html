@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ $baseCss := resources.Get "styles/base.css" }}
+  {{ $gamesCss := resources.Get "styles/games.css" }}
+  {{ $baseStyle := $baseCss | resources.Minify }}
+  {{ $gamesStyle := $gamesCss | resources.Minify }}
+  <style>{{$baseStyle.Content | safeCSS}}</style>
+  <style>{{$gamesStyle.Content | safeCSS}}</style>
+  <div class="st-Content u-center">
+    <section class="st-Feed">
+      <h1 class="st-Feed-title">Catálogo de juegos de Stadia</h1>
+      <p class="st-Claim">
+        Te mostramos el <strong>catálogo completo de juegos en Stadia</strong> que están disponibles para jugar en la plataforma. Además, te los mostramos ordenados según fecha de reciente publicación.
+      </p>
+      <div class="st-Games">
+        {{ range sort ( where ( where (.Site.Pages.ByParam "releaseDate") ".Params.category" "games") ".Params.released" true).Reverse }}
+          {{ partial "game.html" . }}
+        {{ end }}
+      </div>
+    </section>
+
+    {{ partial "aside.html" . }}
+  </div>
+{{ end }}

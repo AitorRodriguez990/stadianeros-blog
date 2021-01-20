@@ -1,0 +1,10 @@
+{{ $taxonomy := "tags" }}
+{{ with .Param $taxonomy }}
+  <ul class="st-Tags">
+    {{ range $index, $tag := . }}
+      <li class="st-Tags-item">
+        <span>{{ $tag }}</span>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

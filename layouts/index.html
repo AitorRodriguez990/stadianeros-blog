@@ -1,0 +1,28 @@
+{{ define "main" }}
+  {{ $paginator := .Paginate (where .Site.Pages ".Params.category" "posts") }}
+  <div class="st-Home st-Content u-center">
+    <section class="st-Feed">
+      <h1 class="st-Feed-title">Últimas noticias de Stadia</h1>
+      <p class="st-Claim">
+        En <strong>Stadianeros</strong> te ayudamos a estar al día de las <strong>novedades y próximos lanzamientos de Stadia</strong>. ¡Para que no te pierdas nada!
+      </p>
+      {{ range $index, $page := $paginator.Pages }}
+        <!-- {{ if not .Site.IsServer }}
+          {{ if eq $index 3 }}
+          {{ partial "ads/list.html" . }}
+          {{ end }}
+        {{ end }} -->
+        
+        <!-- {{ if eq $index 5 }}
+          {{ partial "youtubeAd.html" . }}
+        {{ end }} -->
+
+        {{ partial "summary.html" . }}
+      {{ end }}
+
+      {{ partial "pagination.html" . }}
+    </section>
+
+    {{ partial "aside.html" . }}
+  </div>
+{{ end }}

@@ -1,0 +1,12 @@
+.st-Author {
+  align-items: center;
+  display: flex;
+}
+  img.st-Author-avatar {
+    border: 2px solid var(--c-gray);
+    border-radius: 30px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    height: 35px;
+    margin: 0 var(--m-xsmall) 0 0;
+    width: 35px;
+  }

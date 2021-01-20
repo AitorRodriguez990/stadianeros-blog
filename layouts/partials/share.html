@@ -1,0 +1,17 @@
+<div class="st-Share">
+  <h3 class="st-Share-title">Comparte el artículo 🗣</h3>
+  <div class="st-Share-content">
+    <a target="_blank" rel="nofollow noopener" style="--bgc-link: rgb(37, 168, 224)" href='https://twitter.com/share?url={{.Permalink}}&text="{{ .Title }}" vía @stadianeros'>
+      {{ partial "icons/twitter.html" "white" }}
+    </a>
+    <a target="_blank" rel="nofollow noopener" style="--bgc-link: rgb(59, 90, 153)" href="https://facebook.com/sharer/sharer.php?u={{.Permalink}}">
+      {{ partial "icons/facebook.html" "white" }}
+    </a>
+    <a target="_blank" rel="nofollow noopener" style="--bgc-link: rgb(37, 211, 102)" href='https://wa.me/?text="{{ .Title }}" {{.Permalink}}'>
+      {{ partial "icons/whatsapp.html" "white" }}
+    </a>
+    <a target="_blank" rel="nofollow noopener" style="--bgc-link: rgb(3, 155, 229)" href='https://telegram.me/share/url?url={{.Permalink}}'>
+      {{ partial "icons/telegram.html" "white" }}
+    </a>
+  </div>
+</div>

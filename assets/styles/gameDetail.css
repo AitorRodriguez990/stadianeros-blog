@@ -1,0 +1,103 @@
+/* Games */
+.st-GameDetail h2 {
+  text-decoration: underline;
+}
+.st-GameDetail h2,
+.st-GameDetail h3 {
+  color: var(--c-secondary);
+  margin-top: var(--m-large);
+  margin-bottom: var(--m-default);
+}
+.st-GameDetail h4 {
+  font-size: 18px;
+  margin-bottom: var(--m-small);
+}
+@media screen and (min-width: 561px) {
+  .st-GameDetail {
+    padding: var(--m-default) 0;
+  }
+}
+  .st-GameDetail-header {
+    margin-bottom: var(--m-default);
+  }
+    .st-GameDetail-headerImage {
+      margin: 0 calc(var(--m-default) * -1);
+      position: relative;
+      width: calc(100% + var(--m-default) * 2);
+    }
+      .st-GameDetail-headerImage .st-GameDetail-availability {
+        bottom: var(--m-default);
+        position: absolute;
+        right: var(--m-default);
+      }
+    .st-GameDetail-headerSpecifications {
+      margin-top: var(--m-default);
+    }
+    @media screen and (min-width: 561px) {
+      .st-GameDetail-headerInfo {
+        align-items: flex-start;
+        display: flex;
+      }
+      .st-GameDetail-headerImage {
+        margin: 0;
+        max-width: 40%;
+      }
+      .st-GameDetail-headerSpecifications {
+        margin-top: 0;
+        padding-left: var(--p-large);
+      }
+    }
+    @media screen and (max-width: 560px) {
+      .st-GameDetail-headerImage img {
+        border: none;
+        border-radius: 0;
+      }
+    }
+    
+    .st-GameDetail-headerTitle {
+      color: var(--c-main);
+      font-size: 30px;
+      margin: 0 0 var(--m-small);
+    }
+    @media screen and (max-width: 980px) {
+      .st-GameDetail-headerTitle {
+        font-size: 26px;
+      }
+    }
+
+    .st-GameDetail-headerList {
+      font-size: 18px;
+      list-style: none;
+      margin-bottom: var(--m-default);
+    }
+      .st-GameDetail-headerList li {
+        margin-bottom: 7px;
+      }
+
+    .st-GameDetail-headerDescription {
+      color: var(--c-text);
+      margin: var(--m-default) 0;
+      opacity: 0.75;
+    }
+
+  .st-GameDetail p {
+    font-size: 18px;
+    margin-bottom: var(--m-default);
+    line-height: 150%;
+  }
+  .st-GameDetail-content ul, 
+  .st-GameDetail-content ol {
+    font-size: var(--fz-text);
+    line-height: 26px;
+    list-style-position: outside;
+    margin-bottom: var(--m-default);
+    padding-left: var(--m-large);
+  }
+    .st-GameDetail-content ul li,
+    .st-GameDetail-content ol li  {
+      margin-bottom: var(--m-xsmall);
+    }
+    .st-GameDetail-content ul ul {
+      margin-bottom: 0;
+    }
+    

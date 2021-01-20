@@ -1,0 +1,32 @@
+{{ define "main" }}
+  {{ $baseCss := resources.Get "styles/base.css" }}
+  {{ $gamesCss := resources.Get "styles/games.css" }}
+  {{ $baseStyle := $baseCss | resources.Minify }}
+  {{ $gamesStyle := $gamesCss | resources.Minify }}
+  <style>{{$baseStyle.Content | safeCSS}}</style>
+  <style>{{$gamesStyle.Content | safeCSS}}</style>
+
+  <div class="st-Content u-center">
+    <section class="st-Feed">
+      <h1 class="st-Feed-title">Próximos lanzamientos de juegos de Stadia</h1>
+        
+      <p class="st-Claim">
+        Te mostramos los <strong>próximos lanzamientos de juegos en Stadia</strong> que se esperan en la plataforma. 
+      </p>
+      <div class="st-Games">
+        {{ range sort ( where ( where (.Site.Pages.ByParam "releaseDate") ".Params.category" "games") ".Params.released" false) }}
+          {{ if ne .Params.releaseDate "" }}
+            {{ partial "game.html" . }}
+          {{ end }}
+        {{ end }}
+        {{ range sort ( where ( where (.Site.Pages.ByParam "releaseDate") ".Params.category" "games") ".Params.released" false) }}
+          {{ if eq .Params.releaseDate "" }}
+            {{ partial "game.html" . }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </section>
+
+    {{ partial "aside.html" . }}
+  </div>
+{{ end }}

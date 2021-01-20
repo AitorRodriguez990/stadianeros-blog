@@ -1,0 +1,32 @@
+  <div class="st-Item">
+    <div class="st-Item-image">
+      <a href="{{ .Permalink }}">
+        <img alt="{{ .Title }}" data-src="{{ .Params.image }}" class="lazyload u-lazyload" loading="lazy" />
+      </a>
+    </div>
+    <div class="st-Item-content">
+      <h2 class="st-Item-title">
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </h2>
+      <div class="st-Item-meta">
+        <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}'>
+          {{ .Date.Day }} de {{ index $.Site.Data.months (printf "%d" .Date.Month) }} de {{ .Date.Year }}
+        </time>
+          | 
+        <span>📖 {{ .ReadingTime }} minutos de lectura</span>
+        {{ if isset .Params "author" }}
+          <span class="u-showExceptMobile">|</span> {{ partial "author.html" . }}
+        {{ end }}
+      </div>
+      <div class="st-Item-description">
+        <a href="{{ .Permalink }}">
+          {{ .Description  }}
+        </a>
+      </div>
+      <div class="st-Item-tags">
+          {{ partial "tags.html" .}}
+      </div>
+    </div>
+  </div>

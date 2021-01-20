@@ -1,0 +1,122 @@
+{{ define "main" }}
+  {{ $aboutCss := resources.Get "styles/about.css" }}
+  {{ $aboutStyle := $aboutCss | resources.Minify }}
+  <style>{{$aboutStyle.Content | safeCSS}}</style>
+
+  <div class="st-Content u-center">
+    <section class="st-Feed">
+      <h1 class="st-Feed-title">Quienes somos</h1>
+      <h3 class="st-Claim">
+        Te contamos <strong>quienes formamos parte de Stadianeros y de qué nos encargamos</strong> cada uno de nosotros.
+      </h3>
+      <ul class="st-About">
+        <li class="st-About-item">
+          <div class="st-About-itemImage">
+            <img src="/about/aitor.png" alt="Aitor Rodríguez" />
+          </div>
+          <div class="st-About-itemContent">
+            <div class="st-About-itemName">
+              Aitor Rodríguez<span class="st-About-itemTitle">Fundador y Desarrollador</span>
+            </div>
+            <div class="st-About-itemDescription">
+              Stadia me ha hecho recuperar la ilusión por los videojuegos, y con ello las ganas de crear y desarrollar una comunidad donde poder informar de todas las noticias, juegos e información de esta nueva plataforma de <em>gaming</em>. 
+            </div>
+          </div>
+        </li>
+        <li class="st-About-item">
+          <div class="st-About-itemImage">
+            <img src="/about/fernando.png" alt="Fernando Guerrera" />
+          </div>
+          <div class="st-About-itemContent">
+            <div class="st-About-itemName">
+              Fernando Guerrera<span class="st-About-itemTitle">Social Media y Redactor</span>
+            </div>
+            <div class="st-About-itemDescription">
+              Estoy aquí con muchas ganas de acercar a la comunidad <em>gamer</em> esta revolución que es Stadia a través de novedades y noticias con la mayor frescura y cercanía que aporta nuestro equipo.
+            </div>
+          </div>
+        </li>
+        <li class="st-About-item">
+          <div class="st-About-itemImage">
+            <img src="/about/juanchi.png" alt="Juanchi Vega" />
+          </div>
+          <div class="st-About-itemContent">
+            <div class="st-About-itemName">
+              Juanchi Vega<span class="st-About-itemTitle">Redactor</span>
+            </div>
+            <div class="st-About-itemDescription">
+              Amante de los videojuegos y la tecnología. Escribo, ¿y qué mejor que hacerlo de algo que ha sido infancia y adolescencia como los videojuegos? Traigo muchas ganas de aprender y crear esta comunidad para informar de Stadia.
+            </div>
+          </div>
+        </li>
+        <li class="st-About-item">
+          <div class="st-About-itemImage">
+            <img src="/about/pavlo.png" alt="Pavlo Bodnar" />
+          </div>
+          <div class="st-About-itemContent">
+            <div class="st-About-itemName">
+              Pavlo Bodnar<span class="st-About-itemTitle">Redactor</span>
+            </div>
+            <div class="st-About-itemDescription">
+              Desde que descubrí los videojuegos mi vida ha girado en torno a ellos. No podía desaprovechar la oportunidad de escribir sobre ello y que la gente los vea con los mismos ojos que yo. Stadia y Stadianeros me ha dado la oportunidad de romper rutinas y volver a disfrutar de los videojuegos y hacer que los demás también lo hagan.
+            </div>
+          </div>
+        </li>
+        <li class="st-About-item">
+          <div class="st-About-itemImage">
+            <img src="/about/edgar.png" alt="Edgar Lainez" />
+          </div>
+          <div class="st-About-itemContent">
+            <div class="st-About-itemName">
+              Edgar Lainez<span class="st-About-itemTitle">Redactor</span>
+            </div>
+            <div class="st-About-itemDescription">
+              Apasionado de los juegos y de contar historias. Me gusta aprender y transmitir mis conocimientos a los demás. Por esto, me he subido a este barco llamado Stadia. ¿Te apuntas?
+            </div>
+          </div>
+        </li>
+        <li class="st-About-item">
+          <div class="st-About-itemImage">
+            <img src="/about/jquintana.png" alt="Jesús Quintana" />
+          </div>
+          <div class="st-About-itemContent">
+            <div class="st-About-itemName">
+              Jesús Quintana <span class="st-About-itemTitle">Front - Growth</span>
+            </div>
+            <div class="st-About-itemDescription">
+              Apasionado de los juegos y de hacer crecer negocios online.
+            </div>
+          </div>
+        </li>
+        <li class="st-About-item">
+          <div class="st-About-itemImage">
+            <img src="/about/alejandro.png" alt="Alejandro Popescu" />
+          </div>
+          <div class="st-About-itemContent">
+            <div class="st-About-itemName">
+              Alejandro Popescu <span class="st-About-itemTitle">Redactor</span>
+            </div>
+            <div class="st-About-itemDescription">
+              Metido en el mundo de los videojuegos y del <em>gaming online</em>, Stadianeros me ha dado la oportunidad de acercarme a la comunidad <em>gamer</em>. Vengo con muchas ganas de aprender y aportar a esta gran comunidad, uniéndonos entre todos y cambiando la forma de jugar.
+            </div>
+          </div>
+        </li>
+        <li class="st-About-item">
+          <div class="st-About-itemImage">
+            <img src="/about/adrian.png" alt="Adrián Espejo" />
+          </div>
+          <div class="st-About-itemContent">
+            <div class="st-About-itemName">
+              Adrián Espejo <span class="st-About-itemTitle">Redactor</span>
+            </div>
+            <div class="st-About-itemDescription">
+              <em>Gamer</em> desde pequeño y redactor online desde hace varios años. Con ganas de transmitir a toda la comunidad la gran importancia de Stadia para el mundo de los videojuegos. ¿Me acompañas en este viaje?
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    {{ partial "aside.html" . }}
+  </div>
+{{ end }}

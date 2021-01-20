@@ -1,0 +1,10 @@
+{{ $taxonomy := "tags" }}
+{{ with .Param $taxonomy }}
+  <ul class="st-Tags">
+    {{ range $index, $tag := . }}
+      <li class="st-Tags-item">
+        <a href="/etiquetas/{{ $tag | urlize }}">{{ $tag }}</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

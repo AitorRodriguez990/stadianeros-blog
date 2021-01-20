@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tecnología on Stadianeros 🎮 | Noticias, tutoriales y juegos de Stadia</title>
+    <link>https://www.stadianeros.com/etiquetas/tecnolog%C3%ADa/</link>
+    <description>Recent content in Tecnología on Stadianeros 🎮 | Noticias, tutoriales y juegos de Stadia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Thu, 09 Apr 2020 05:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.stadianeros.com/etiquetas/tecnolog%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>La tecnología detrás de Stadia: Kubernetes</title>
+      <link>https://www.stadianeros.com/la-tecnologia-detras-de-stadia-kubernetes/</link>
+      <pubDate>Thu, 09 Apr 2020 05:00:00 +0000</pubDate>
+      
+      <guid>https://www.stadianeros.com/la-tecnologia-detras-de-stadia-kubernetes/</guid>
+      <description>Qué es Kubernetes Kubernetes, también conocido como K8s, es el servicio que se encarga es de gestionar contenedores de programas, donde están los mínimos recursos necesarios para ejecutar un juego.
+Cuando hablamos de una Instancia/Contenedor, nos referimos a una copia del juego, así como todos los recursos necesarios para que este funcione.
+Beneficios Como toda tecnología, se utiliza puesto que aporta una serie de beneficios respecto a otras. A continuación te exponemos cuales son estos beneficios:</description>
+    </item>
+    
+  </channel>
+</rss>

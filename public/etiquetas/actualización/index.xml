@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Actualización on Stadianeros 🎮 | Noticias, tutoriales y juegos de Stadia</title>
+    <link>https://www.stadianeros.com/etiquetas/actualizaci%C3%B3n/</link>
+    <description>Recent content in Actualización on Stadianeros 🎮 | Noticias, tutoriales y juegos de Stadia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Wed, 04 Mar 2020 09:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.stadianeros.com/etiquetas/actualizaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Se confirma que la versión gratuita de Stadia está a punto de llegar</title>
+      <link>https://www.stadianeros.com/se-confirma-que-la-version-gratuita-de-stadia-esta-a-punto-de-llegar/</link>
+      <pubDate>Wed, 04 Mar 2020 09:00:00 +0000</pubDate>
+      
+      <guid>https://www.stadianeros.com/se-confirma-que-la-version-gratuita-de-stadia-esta-a-punto-de-llegar/</guid>
+      <description>Hace poco que se ha publicado la nueva actualización para Stadia, en concreto la versión 2.7. Dicha versión no trae más que algún cambio estético y en la interfaz de usuario, pero los chicos de 9to5google han analizado el código de la apk y han encontrado novedades muy interesantes que parece que en breve llegarán a la plataforma.
+¿Qué novedades van a llegar a Stadia? Sin duda, la novedad más destacable es que según el código analizado, es que en breve llegará la versión Stadia Base.</description>
+    </item>
+    
+  </channel>
+</rss>

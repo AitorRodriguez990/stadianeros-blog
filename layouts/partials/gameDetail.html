@@ -1,0 +1,94 @@
+{{ $gameDetailCss := resources.Get "styles/gameDetail.css" }}
+{{ $gameDetailStyle := $gameDetailCss | resources.Minify }}
+<style>{{$gameDetailStyle.Content | safeCSS}}</style>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Stadianeros",
+    "alternateName": "Stadianeros",
+    "url": "https://www.stadianeros.com"
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Stadianeros",
+    "url": "https://www.stadianeros.com",
+    "logo": "https://www.stadianeros.com/stadianeros.png",
+    "sameAs": [
+      "https://t.me/stadianeros",
+      "https://twitter.com/stadianeros",
+      "https://www.facebook.com/stadianeros"
+    ]
+  }
+</script>
+
+<div class="st-Content u-center">
+  <article class="st-GameDetail">
+    <header class="st-GameDetail-header">
+      <div class="st-GameDetail-headerInfo">
+        <div class="st-GameDetail-headerImage">
+          <img class="u-borderImage u-lazyload lazyload" data-src="{{- .Params.Image -}}" title="{{- .Title -}}" alt="{{- .Title -}}" loading="lazy" />
+          <div class="st-GameDetail-availability">
+            {{ if .Params.released }}
+              <div class="st-Availability is-online">Disponible</div>
+            {{ else }}
+              <div class="st-Availability is-offline">Próximamente</div>
+            {{ end }}
+          </div>
+        </div>
+        <div class="st-GameDetail-headerSpecifications">
+          <h1 class="st-GameDetail-headerTitle">{{- .Title -}}</h1>
+          <ul class="st-GameDetail-headerList">
+            <li>
+              🚀 Fecha de lanzamiento:
+              <strong>
+                {{ if eq .Params.releaseDate "" }}
+                  -
+                {{ else }}
+                  {{ $fullReleaseDay := time .Params.releaseDate }}
+                  {{ $fullReleaseDay.Day }} de {{ index $.Site.Data.months (printf "%d" $fullReleaseDay.Month) }} de {{ $fullReleaseDay.Year }}
+                {{ end }}
+              </strong>
+            </li>
+            <li>🏢 Editor: <strong>{{ .Params.company }}</strong></li>
+            {{ if .Params.developer }}
+              <li>👨‍💻 Desarrollador: <strong>{{ .Params.developer }}</strong></li>
+            {{ end }}
+            <li>🎮 Resolución: <strong>{{ .Params.resolution }}</strong></li>
+            <li>🕹 FPS: <strong>{{ .Params.fps }}</strong></li>
+            <li>💰 Precio oficial: <strong>{{ .Params.price }}€</strong></li>
+          </ul>
+          {{- partial "tagsWithoutLink.html" . -}}
+        </div>
+      </div>
+      <p class="st-GameDetail-headerDescription">
+        {{ .Description }}
+      </p>
+    </header>
+
+    <section class="st-GameDetail-content">
+      {{ if .Content }}
+        <h2>Descripción</h2>
+        {{- .Content -}}
+      {{ end }}
+
+      {{ if .Params.Trailer }}
+        <h2>Tráiler</h2>
+        <div class="u-youtube" >
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+            <iframe src="https://www.youtube.com/embed/{{ .Params.Trailer }}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube {{- .Title -}}"></iframe>
+          </div>
+        </div>
+      {{ end }}
+      
+    </section>
+
+    {{ partial "disqus.html" . }}
+  </article>
+
+  {{ partial "aside.html" . }}
+</div>

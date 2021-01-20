@@ -1,0 +1,10 @@
+<div class="st-SiteTags">
+  <h3 class="st-Aside-title">Etiquetas</h3>
+  <ul class="st-Tags">
+    {{ range $name, $items := .Site.Taxonomies.tags }}
+      <li class="st-Tags-item">
+        <a href="{{ $.Site.BaseURL }}etiquetas/{{ $name | urlize | lower  }}">{{ $name }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</div>

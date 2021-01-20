@@ -1,0 +1,8 @@
+{{ $authorCss := resources.Get "styles/author.css" }}
+{{ $authorStyle := $authorCss | resources.Minify }}
+<style>{{$authorStyle.Content | safeCSS}}</style>
+
+<div class="st-Author">
+  {{ $author := index .Site.Data.authors .Params.author }}
+  Por {{ $author.name }}
+</div>

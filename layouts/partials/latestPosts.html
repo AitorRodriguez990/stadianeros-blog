@@ -1,0 +1,16 @@
+<div class="st-LatestPosts">
+  <h3 class="st-Aside-title">Últimas noticias publicadas 🆕</h3>
+  <ul>
+    {{ range (first 5 (where .Site.Pages ".Params.category" "posts")) }}
+      <li class="st-LatestPosts-item">
+        <a href="{{.Permalink}}">
+            <img alt="{{ .Title }}" class="u-lazyload u-borderImage lazyload" loading="lazy" data-src="{{ .Params.image }}" />
+            <div class="st-LatestPosts-itemDescription">
+              <h4 class="st-LatestPosts-itemTitle">{{ .Title }}</h4>
+              <p class="st-LatestPosts-itemDate">{{ .Date.Day }} de {{ index $.Site.Data.months (printf "%d" .Date.Month) }} de {{ .Date.Year }}</p>
+            </div>
+          </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>

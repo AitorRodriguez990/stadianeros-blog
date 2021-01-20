@@ -1,0 +1,33 @@
+.st-Landing-title {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: calc(var(--m-default) * 1.5);
+  padding-top: var(--m-default);
+  position: relative;
+}
+  .st-Landing-title:after {
+    background-color: var(--c-main);
+    bottom: -10px;
+    content: "";
+    height: 5px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+  @media screen and (max-width: 560px) {
+    .st-Landing-title {
+      font-size: 22px;
+    }
+  }
+.st-Landing h2 {
+  color: var(--c-secondary);
+  margin-top: var(--m-large);
+  margin-bottom: var(--m-default);
+  text-decoration: underline;
+}
+.st-Landing p {
+  font-size: 18px;
+  margin-bottom: var(--m-default);
+  line-height: 150%;
+}
+  
